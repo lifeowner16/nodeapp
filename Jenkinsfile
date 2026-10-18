@@ -1,9 +1,7 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:20-alpine'
-        }
-    }
+    agent { 
+        label 'k8s-agent' 
+    } 
 
     environment {
         APP_NAME = 'simple-node-jenkins'
